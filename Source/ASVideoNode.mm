@@ -495,6 +495,10 @@ static NSString * const kRate = @"rate";
   if (oldState == playerState) {
     return;
   }
+
+  if (![self isStateChangeValid:playerState]) {
+    return;
+  }
   
   if (_delegateFlags.delegateVideoNodeWillChangePlayerStateToState) {
     [self.delegate videoNode:self willChangePlayerState:oldState toState:playerState];

@@ -55,7 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable) AVVideoComposition *videoComposition;
 @property (nullable) AVAudioMix *audioMix;
 
-@property (nullable, readonly) AVPlayer *player;
+@property (nullable) AVPlayer *player;
 
 // TODO: copy
 @property (nullable, readonly) AVPlayerItem *currentItem;
@@ -71,6 +71,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property BOOL shouldAutorepeat;
 
 @property BOOL muted;
+@property BOOL doNotPauseVideoFlag;
 @property BOOL shouldAggressivelyRecoverFromStall;
 
 @property (readonly) ASVideoNodePlayerState playerState;
